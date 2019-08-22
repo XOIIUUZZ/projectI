@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		.backgroundbox{
+			background: pink;
+			width: 800px;
+			height: 500px;
+		}
+		.movebox{
+				background: black;
+			width: 80px;
+			height: 80px;
+			position: relative;
+			
+		}
+	</style>
+	<body>
+		<div class="backgroundbox">
+				<div class="movebox"></div>
+		</div>
+	</body>
+	<script src="js/jquery-2.1.0.js"></script>
+	<script>    
+	$('.backgroundbox').mousemove(function(event){
+		var pageX=event.pageX
+		var pageY=event.pageY
+		
+		var offsetX=$('.backgroundbox').offset().left
+		var offsetY=$('.backgroundbox').offset().top
+		
+		var height=$('.movebox').outerHeight();
+		var width=$('.movebox').outerWidth();
+		
+		var boxHeight=$('.backgroundbox').outerHeight();
+		var boxWidth=$('.backgroundbox').outerWidth();
+		
+		
+		var positionX = pageX-offsetX-width/2
+		var positionY = pageY-offsetY-height/2
+		
+		positionX=positionX > 0 ? positionX: 0
+		positionY=positionY > 0 ? positionY: 0
+
+		positionX=positionX>(boxWidth-width)?boxWidth-width:positionX
+		positionY=positionY>(boxHeight-height)?boxHeight-height:positionY
+
+		$('.movebox').css({
+			left:positionX,
+			top:positionY
+		})
+
+	})
+	</script>
+</html>
+
+	

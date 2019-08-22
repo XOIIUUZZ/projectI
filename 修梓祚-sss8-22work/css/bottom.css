@@ -1,0 +1,151 @@
+.underbottom {
+	border-top: 2px solid #FF2D52;
+	width: 100%;
+	position: absolute;
+	margin-top: 20px;
+}
+
+.underbottom:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+.topicon-box {
+	margin-top: 14px;
+	width: 1200px;
+	height: 140px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.text-box {
+	height: 200px;
+	width: 100%;
+	position: relative;
+}
+
+.bottom-box {
+	height: 60px;
+	width: 100%;
+	position: relative;
+	background: #3C3636;
+}
+
+.text-box .TEXT-LIST {
+	width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+}
+.TEXT-INNER li:hover{
+	color: #FF2D52;
+	cursor: pointer;
+}
+.TEXT-INNER ul .ONLY:hover{
+	color: black;
+}
+.text-box .TEXT-INNER {
+	width: 180px;
+	height: 100%;
+	display: inline-block;
+	position: relative;
+}
+
+.text-box .TEXT-INNERS {
+	width: 250px;
+	height: 110px;
+	border-left: 1px solid gray;
+	display: inline-block;
+	position: relative;
+	top: -45px;
+}
+
+.TEXT-INNER ul {
+	position: absolute;
+	line-height: 25px;
+	top: 50px;
+	left: 20px;
+}
+
+.TEXT-INNERS ul {
+	position: absolute;
+	line-height: 25px;
+	top: 10px;
+	margin-left: 45px;
+}
+
+.TEXT-INNER ul li {
+	font-size: 13px;
+}
+
+.TEXT-INNERS ul li {
+	font-size: 15px;
+	text-align: center;
+}
+
+.TEXT-INNER ul .ONLY {
+	font-size: 14px;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+.TEXT-INNERS ul .ONLYS {
+	font-size: 28px;
+	margin-top: 14px;
+	font-weight: bold;
+}
+
+.TEXT-INNERS ul {
+	line-height: 25px;
+}
+
+.icon-box {
+	width: 205px;
+	height: 62px;
+	vertical-align: middle;
+	display: inline-block;
+	margin-top: 42px;
+	margin-left: 26px;
+}
+
+.iCONX {
+	position: relative;
+	display: inline-block;
+}
+
+.icon-box ul {
+	display: inline-block;
+	position: relative;
+top: -10px;
+left: 0px;
+}
+
+.icon-box ul li {
+	font-size: 13px;
+	color: grey;
+	margin-bottom: 10px;
+}
+
+.icon-box ul .TITLE {
+	font-weight: bold;
+	color: black;
+}
+
+.bottom-icon {
+	width: 280px;
+	height: 50px;
+	display: inline-block;
+}
+
+.bottom-box span {
+	position: relative;
+	left: 150px;
+	color: white;
+	font-size: 12px;
+	vertical-align: 10px;
+}
+
+.lowest-img {
+	width: 1200px;
+	margin: 0 auto;
+}

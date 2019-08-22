@@ -1,0 +1,43 @@
+.AN .ANNIU .button {
+	width: 37px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	height: 32px;
+	font-size: 12px;
+	display: inline-block;
+	text-align: center;
+	line-height: 32px;
+}
+
+.AN .ANNIU:first-child .button,
+.AN .ANNIU:last-child .button {
+	width: 66px;
+}
+
+.ANNIU .button:hover {
+	background: #FF2D52;
+	color: white;
+	border-color: #FF2D52;
+}
+
+.ANNIU .button.disabled {
+	background: #fff;
+	color: #ccc;
+	border-color: #ccc;
+	cursor: not-allowed;
+}
+
+.ANNIU .button.current {
+	background: #FF2D52;
+	color: #fff;
+	border-color: #FF2D52;
+}
+.bTN-NO5{
+	height: 72px;
+	width: 100%;
+	
+}
+.PAGE-button{
+	width: 1200px;
+	margin: 0 auto;
+}

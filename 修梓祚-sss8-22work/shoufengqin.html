@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		.textitself1{
+			width: 500px;
+			background: yellow;
+			display: none;
+		}
+		.textitselfbtnS1{
+			width: 500px;
+			min-height: 20px;
+			background: yellow;
+		}
+		.colorbox.on .textitselfbtnS1{
+			color: red;
+		}
+	</style>
+	<body>
+		<div class="colorbox">
+		<div class="textitselfbtnS1">点击展开
+		<p class="textitself1">this a funckin horrible story that u had nerver heard!
+		this a funckin horrible story that u had nerver heard!
+		this a funckin horrible story that u had nerver heard!
+		this a funckin horrible story that u had nerver heard!
+		this a funckin horrible story that u had nerver heard!
+		this a funckin horrible story that u had nerver heard!</p>
+		</div>
+		</div>
+		<div class="colorbox">
+		<div class="textitselfbtnS1">点击展开
+		<p class="textitself1">this a funckin horrible story that u had nerver heard!
+		this a funckin horrible story that u had nerver heard!
+		this a funckin horrible story that u had nerver heard!
+		this a funckin horrible story that u had nerver heard!
+		this a funckin horrible story that u had nerver heard!
+		this a funckin horrible story that u had nerver heard!</p>
+		</div>
+		</div>
+		<div class="colorbox">
+		<div class="textitselfbtnS1">点击展开
+		<p class="textitself1">this a funckin horrible story that u had nerver heard!
+		this a funckin horrible story that u had nerver heard!
+		this a funckin horrible story that u had nerver heard!
+		this a funckin horrible story that u had nerver heard!
+		this a funckin horrible story that u had nerver heard!
+		this a funckin horrible story that u had nerver heard!</p>
+		</div>
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+	<script>
+		window.onload=function(){
+		
+		$('.textitselfbtnS1').click(function(){
+
+			var btn1=$(this)
+			
+			if(btn1.parent().hasClass('on')){
+			
+			btn1.parent().removeClass('on')
+
+			}
+			
+			else{
+
+				btn1.parent().addClass('on')
+				btn1.parent().siblings().removeClass('on')
+				$("p").slideUp("slow");
+				
+			}
+			btn1.find(".textitself1").slideToggle(300)
+		}
+		)
+		}
+	</script>
+</html>

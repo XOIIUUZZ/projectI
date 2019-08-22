@@ -1,0 +1,486 @@
+.main-content-goodssale{
+	height: 556px;
+	width: 1200px;
+	margin: 0 auto;
+	border: 1px solid #E2E2E2;
+	margin-bottom: 20px;
+}
+.goodssale-img{
+	height: 556px;
+	width: 440px;
+	border-right: 1px solid #E2E2E2;
+	box-sizing: border-box;
+	padding: 19px 20px;
+}
+.goodssale-text{
+	height: 155px;
+	width: 760px;
+	padding: 19px 30px 21px 30px;
+	box-sizing: border-box;
+}
+.goodssale-price{
+	width: 760px;
+	height: 100px;
+	background: #fff9f5;
+
+}
+.goodssale-num{
+	height: 300px;
+	width: 760px;
+	box-sizing: border-box;
+	padding: 0 30px;
+}
+.detail-goods{
+	height: 708px;
+	width: 960px;
+	border: 1px solid #E2E2E2;
+	border-top: none;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+}
+.main-content-detail{
+	width: 1200px;
+	margin: 0 auto;
+}
+.detail-goodsinfor{
+	height: 102px;
+	width: 100%;
+	padding: 19px;
+	box-sizing: border-box;
+}
+.goods-Commentary{
+	height: 135px;
+	width: 960px;
+	border: 1px solid #E2E2E2;
+	padding: 14px;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+}
+.goods-Commentary-con{
+	width: 960px;
+	border: 1px solid #E2E2E2;
+}
+.totalgoods-lists-detail{
+	width: 965px;
+}
+.warm-Reminder{
+	height: 744px;
+	width: 960px;
+	border: 1px solid #E2E2E2;
+}
+.sale-record{
+	width: 960px;
+	height: 291px;
+	border: 1px solid #E2E2E2;
+}
+.recommendforu{
+	height: 310px;
+	width: 960px;
+	border: 1px solid #E2E2E2;
+}
+.recommendforu-itself2{
+	height: 38px;
+	width: 960px;
+	line-height:38px;
+	box-sizing: border-box;
+	border-bottom: 1px solid #E2E2E2;
+	background: #fff9f5;
+	
+}
+.recommendforu-itselfr{
+	height: 38px;
+	width: 240px;
+	margin-right:0;
+	text-align: right;
+	line-height:38px;
+	color: #666666;
+}
+.recommendforu-contentmaybelike{
+	height: 230px;
+	width: 168px;
+	box-sizing: border-box;
+}
+.recommendforu-downpart{
+	height: 272px;
+	width: 960px;
+	box-sizing: border-box;
+	padding: 20px 0 20px 20px;
+	
+}
+.stuff-textofu{
+	color: black;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space:nowrap;
+	display: inline-block;
+	width: 168px;
+	
+}
+.stuff-textofu:hover{
+	cursor: pointer;
+	color: #FF2D52;
+}
+.sale-record-text{
+		height: 38px;
+	width: 960px;
+	line-height:38px;
+	box-sizing: border-box;
+	border-bottom: 1px solid #E2E2E2;
+	background: #fff9f5;
+}
+.sale-record-downpart{
+		height: 272px;
+	width: 960px;
+	box-sizing: border-box;
+	padding:0 13px;
+}
+.sale-record-lists{
+	width: 937px;
+	height: 40px;
+	margin: 0 auto;
+	border-bottom: 1px solid #E2E2E2;
+	line-height: 40px;
+}
+
+.sale-record-con{
+	width: 937px;
+	height: 41px;
+	margin: 0 auto;
+	border-bottom: 1px dashed #E2E2E2;
+	line-height: 41px;
+}
+.sale-record-conS{
+	width: 937px;
+	height: 42px;
+	margin: 0 auto;
+	line-height: 42px;
+
+}
+.warm-Reminder-text{
+	height: 90px;
+	width: 100%;
+	border-bottom: 1px solid #E2E2E2;
+	padding: 11px 14px;
+	box-sizing: border-box;
+}
+.goods-consultation{
+	width: 220px;
+	height: 100%;
+	border-left: 2px solid #E2E2E2;
+	text-align: center;
+}
+.warm-Reminder-text-left{
+	width:695px;
+	height:100%;
+	line-height: 21px;
+}
+.goods-consultation-text{
+	display: inline-block;
+	height: 40px;
+	width: 115px;
+	background: #ec193e;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 1px;
+}
+.arrowSleft{
+	width: 24px;
+	height: 54px;
+	border: 1px solid #E2E2E2;
+	line-height: 54px;
+	text-align: center;
+	border-radius: 3px;
+	margin-right: 3px;
+}
+.arrowrSRight{
+	width: 24px;
+	height: 54px;
+	border: 1px solid #E2E2E2;
+	line-height: 54px;
+	text-align: center;
+	border-radius: 3px;
+}
+
+.littlepic{
+	height: 54px;
+	width: 54px;
+	border: 1px solid #E2E2E2;
+	margin-left: 10px;
+}
+.littlepic:hover{
+	border-color: #FF2D52
+}
+.collectgoods{
+	height: 26px;
+	width: 78px;
+	border: 1px solid #E2E2E2;
+	border-radius: 3px;
+	text-align: center;
+	line-height: 26px;
+}
+.shareicon{
+    vertical-align: -3px;
+    }
+ 
+ .goodssale-text-German{
+    	height: 26px;
+    	width: 26px;
+    	overflow:hidden;
+    	border-radius: 50%;
+    }
+.goodsslogans{
+	height: 60px;
+	line-height: 25px;
+	
+}
+.groupbuying{
+	height: 18px;
+	width: 18px;
+	text-align: center;
+	line-height: 18px;
+	background: #ff6600;
+	color: white;
+}
+.free-shipping{
+		height: 18px;
+	width: 38px;
+	text-align: center;
+	line-height: 18px;
+	background: #ff6600;
+	color: white;
+}
+.alarmclock{
+	vertical-align: -4px;
+}
+.choosable{
+	vertical-align: -18px;
+}
+.cutoraddicon{
+
+	width: 18px;
+	height: 28px;
+border: 1px solid #E2E2E2;
+text-align: center;
+line-height: 28px;
+}
+.numofcutandadd{
+	
+	height: 28px;
+	width: 58px;
+	line-height: 28px;
+	text-align: center;
+	border: 1px solid #E2E2E2;
+	margin: 0 6px;
+	
+}
+
+.choosableS{
+	margin-top:7px
+}
+.goodsstorage{
+	vertical-align: -3px;
+}
+.addtocart{
+	width: 160px;
+	height: 48px;
+	background: #fe7258;
+ 	margin-top: 32px;
+ 	margin-left: 36px;
+ 	border-radius: 5px;
+ 	margin-right: 20px;
+ 	 	line-height: 48px;
+ 	text-align: center;
+}
+.buynow{
+		width: 120px;
+	height: 48px;
+	background: #FF2D52;
+ 	border-radius: 5px;
+ 	margin-top: 32px;
+ 	line-height: 48px;
+ 	text-align: center;
+	
+}
+.carticon{
+	vertical-align: -3px;
+	margin-right: 10px;
+}
+.goodscustom{
+	height: 39px;
+	width: 100px;
+	text-align: center;
+	line-height: 30px;
+}
+.main-right-customlists{
+	    width: 960px;
+    height: 36px;
+    background: #FFF9F5;
+    border: 1px solid #E2E2E2;
+    border-bottom: transparent;
+    box-sizing: border-box;
+}
+.detailofgoods li{
+	display:inline-block;
+	width: 200px;
+	font-size: 12px;
+	margin-right: 25px;
+	margin-bottom: 5px;
+}
+.phonebuyicon{
+	height:36px;
+	width: 100px;
+	line-height: 36px;
+}
+.iconpb{
+	vertical-align: -3px;
+}
+.Comments{
+	width: 220px;
+	height: 88px;
+	border-left: 1px solid #E2E2E2;
+}
+.progressbar{
+	width:200px;
+	height: 12px;
+	background: #f6f6f6;
+	vertical-align: -2px;
+	overflow:  hidden;
+display: inline-block;
+}
+.progressbarinner{
+	width: 180px;
+	height: 12px;
+	background: #FF2D52;
+}
+.progressbarinner2{
+		width: 15px;
+	height: 12px;
+	background: #FF2D52;
+}
+.progressbarinner3{
+		width: 5px;
+	height: 12px;
+	background: #FF2D52;
+}
+.uploadcomments{
+	width: 115px;
+	height: 40px;
+	background: #FF2D52;
+	line-height: 40px;
+	text-align: center;
+	display: inline-block;
+	margin-left: 53px;
+	margin-top: 14px;
+}
+.uploadcomments:hover{
+	background: pink;
+	cursor: pointer;
+	
+	
+}
+.ClassificationofComments{
+	height: 39px;
+	width: 960px;
+	background:#fff9f5;
+	border: 1px solid #E2E2E2;
+	border-bottom: transparent;
+}
+.ClassificationFirst{
+	width: 120px;
+	height: 39px;
+	text-align: center;
+	line-height: 39px;
+}
+.kindof{
+	width: 90px;
+	height: 39px;
+	line-height: 39px;
+	text-align: center;
+}
+.Commentstext{
+	width:920px;
+	margin: 20px auto;
+	border-bottom: 1px solid #E2E2E2;
+}
+.Headportrait{
+	width: 70px;
+	margin-right: 20px;
+}
+.Headportraitborder{
+	height: 54px;
+	width: 54px;
+	margin: 0 auto;
+	border: 1px solid #E2E2E2;
+}
+.haopingtouxiang{
+	margin: 7px;
+}
+.littlepic-comment{
+	border: 1px solid #E2E2E2;
+	margin-right: 7px;
+}
+.servicereply{
+	width: 830px;
+	height: 52px;
+	line-height: 52px;
+	border-top: 1px dashed #E2E2E2;
+	display: inline-block;
+}
+.CommentstextRIGHT{
+	width: 830px;
+}
+.Commentstext:last-child{
+	border-bottom: 1px solid transparent;
+
+}
+.servicereplyS{
+	width: 830px;
+	height: 52px;
+	line-height: 25px;
+	border-top: 1px dashed #E2E2E2;
+	display: inline-block;
+}
+.uploadurcomment{
+	width: 960px;
+	box-sizing: border-box;
+	display: none;
+}
+.textare{
+	width: 500px;
+	height: 100px;
+}
+.submitbtn{
+	display: inline-block;
+	width: 60px;
+	height: 30px;
+	font-size: 12px;
+	border: 1px solid #E2E2E2;
+	line-height: 30px;
+	text-align: center;
+	vertical-align: 11px;
+	margin-left: 50px;
+}
+.submitbtn:hover{
+	background: #E2E2E2;
+	cursor: pointer;
+}
+.zoomed-img{
+	position: relative;
+}
+.Magnifier{
+	/*width: 100px;
+	height: 100px;*/
+	background: white;
+	opacity: 0.5;
+	position: absolute;
+	top: 0;
+	left:0;
+}
+.displayzoom{
+	position: absolute;
+	top: 0;
+	right: -440px;
+	/*width: 200px;
+	height: 200px;*/
+	overflow: hidden;
+}

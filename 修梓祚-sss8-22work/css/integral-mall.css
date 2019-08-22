@@ -1,0 +1,160 @@
+.banner-display{
+	width: 100%;
+	height: 400px;
+	position: relative;
+}
+.userinfor{
+	width: 270px;
+	height: 323px;
+	background: white;
+	position: absolute;
+	top: 30px;
+	left: 133px;
+}
+.usericon{
+	width: 225px;
+	height: 146px;
+	margin: 30px auto;
+	box-sizing: border-box;
+	border-bottom: 1px solid #E2E2E2;
+	padding-bottom: 20px;
+}
+
+.diamondsver{
+	display: inline-block;
+	vertical-align: -5px;
+}
+.EXPLINE{
+	width: 120px;
+	height: 12px;
+    background: #E2E2E2;	
+}
+.fillin{
+	height: 12px;
+	width: 60%;
+	background: #FF2D52;
+}
+.signin{
+	width: 60px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	background: #FF2D52;
+	border-radius: 5px;
+}
+.integralinforI{
+	width: 245px;
+	margin:0 auto;
+	margin-bottom: 20px;
+}
+.killpaper{
+	height: 60px;
+	width: 142px;
+	line-height: 60px;
+	text-align: center;
+	border-bottom: 3px solid #FF2D52;
+	margin-bottom: -2px;
+	z-index: 1;
+	position: relative;
+}
+.center-conten{
+	width: 1200px;
+	margin: 0 auto;
+}
+.killpaper-box{
+	height: 220px;
+	width: 100%;
+	border: 1px solid #E2E2E2;
+	padding: 20px;
+	box-sizing: border-box;
+
+}
+.changething{
+	height: 370px;
+	width: 100%;
+	border: 1px solid #E2E2E2;
+	box-sizing: border-box;
+	padding: 20px 0;
+	
+}
+.killpaperlist{
+	width: 280px;
+	height: 180px;
+	background-image: url(../img/killpaper.png);
+}
+.killpaperlist-top{
+	height: 105px;
+	width: 248px;
+	border-bottom: 1px dashed #E2E2E2;
+    margin:0 auto;
+}
+.killpaperlist-bottom{
+	width: 140px;
+	height: 38px;
+	border-radius: 30px;
+    margin:0 auto;
+    background: #ff92a5;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 38px;
+    
+}
+.Boutique{
+	width: 100%;
+	border: 1px solid #E2E2E2;
+	box-sizing: border-box;
+	padding: 20px 0 0 0;
+}
+.Boutique-list{
+	box-sizing: border-box;
+	height: 335px;
+	width: 217px;
+	border: 1px solid #E2E2E2;
+	position: relative;
+	margin: 0 auto;
+}
+.rightnowchange{
+	width: 148px;
+	height: 36px;
+	background: #ec193e;
+	line-height: 36px;
+	text-align: center;
+	border-radius: 8px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+.borderline{
+	border: 2px solid #FF2D52;
+	height: 334px;
+	width: 215px;
+	position: absolute;
+	top: -3px;
+    left: -2px;
+    display: none;
+}
+.Boutique-list:hover .borderline{
+    display: block;
+}
+.changething-list:hover .borderline{
+    display: block;
+}
+.Boutique-list-box{
+	height: 335px;
+	display: inline-block;
+	width: 20%;
+	margin-bottom: 20px;
+}
+.changething-list-box{
+		height: 335px;
+	display: inline-block;
+	width: 20%;
+}
+.changething-list{
+	box-sizing: border-box;
+	height: 335px;
+	width: 217px;
+	border: 1px solid #E2E2E2;
+	position: relative;
+	margin: 0 auto;
+}

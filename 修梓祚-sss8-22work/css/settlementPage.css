@@ -1,0 +1,160 @@
+.main-content-confirm{
+	width: 1200px;
+	margin: 0 auto;
+}
+.imforconfirm{
+	height: 55px;
+	width: 100%;
+	border-bottom: 1px solid #E2E2E2;
+	line-height: 55px;
+}
+.imforconfirm-text{
+	height: 54px;
+	border-bottom:3px solid #FF2D52;
+	display: inline-block;
+}
+.Receiving-address{
+    height: 156px;
+    width: 261px;
+	border: 1px solid #E2E2E2;
+	border-radius: 5px;
+	position: relative;
+	padding: 20px;
+	box-sizing: border-box;
+	float: left;
+	
+}
+.Receiving-address:last-child{
+    height: 156px;
+    width: 261px;
+	border: 1px solid #E2E2E2;
+	border-radius: 5px;
+	position: relative;
+	padding: 20px;
+	box-sizing: border-box;
+	float: left;
+	text-align: center;
+	line-height: 156px;
+	
+}
+.borderOfreceive{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: none;
+	
+	
+}
+.Receiving-address:hover .borderOfreceive{
+	display: block;
+}
+.unborderOfreceive{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.addaddress-icon{
+	
+	position: absolute;
+    top: 50px;
+    left: 110px;
+}
+.wayofsend{
+	height: 38px;
+	width: 118px;
+	border: 1px solid #E2E2E2;
+	text-align: center;
+	line-height: 38px;
+	display: inline-block;
+	margin-right: 20px;
+	margin-top: 20px;
+}
+
+.wayofsend:hover{
+	
+	color:#FF2D52;
+	border: 1px solid #FF2D52;
+	
+}
+.settle-part{
+height: 598px;
+width: 1200px;	
+margin: 0 auto;
+border: 1px solid #E2E2E2;
+box-sizing: border-box;
+padding: 19px;
+margin-top: 20px;
+}
+
+.settle-part-top{
+	
+width: 1160px;
+height: 40px;	
+background: #fff9f5;
+line-height:40px;
+
+}
+
+.settle-part-content{
+height: 120px;
+width: 1160px;
+background: #fff9f5;
+margin-bottom: 2px;	
+box-sizing: border-box;
+padding: 20px 0;
+}
+
+.settle-partcontent-img{
+	height: 80px;
+	width: 80px;
+	
+}
+.settle-part-content-text{
+	width: 238px;
+	display: inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 2; 
+	-webkit-box-orient: vertical;  
+	line-height:20px;
+	margin-bottom: 32px;
+	margin-left: 20px;
+}
+.infor-settle{
+	margin-bottom: 43px;
+	width: 68px;
+	margin-left: 63px;
+}
+.attributeof{
+	width: 160px;
+	height: 80px;
+	text-align: center;
+}
+.groupbuying-TEXT{
+	height: 20px;
+	width: 44px;
+	border: 1px solid #FF2D52;
+	display: inline-block;
+	border-radius: 5px;
+	line-height: 20px;
+}
+.infor-price{
+	height: 198px;
+	width: 100%;
+	border-bottom: 1px solid #E2E2E2;	
+	padding: 20px 0 0 0;
+	
+}
+.Dropdown-box{
+	width: 300px;
+	height: 30px;
+}
+.confirmandpay{
+	width: 160px;
+	height: 48px;
+	background: #FF2D52;
+	color: white;
+	text-align: center;
+	line-height: 48px;
+	border-radius: 5px;
+}

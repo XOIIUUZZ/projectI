@@ -1,0 +1,174 @@
+.registerbtn:hover{
+	cursor: pointer;
+}
+	.login-button{
+		width: 305px;
+		height: 35px;
+border: 0;	
+}
+.login-part{
+	width: 348px;
+	height: 360px;
+	background: white;
+	position: absolute;
+	left: 818px;
+	top: 58px;
+	display: none;
+}
+.login-part.showup{
+	display: block;
+}
+
+.login-button:hover{
+	cursor: pointer;
+	background: #FE9373;
+	color: black;
+}
+.login-part-content{
+	width: 308px;
+	height: 315px;
+	border: 1px solid white;
+}
+.login-text{
+	line-height: 18px;}
+.circleR{
+	width: 15px;
+	height: 15px;
+		border-radius: 50%;
+     text-align: center;
+		color: white;
+		margin-left: 10px;
+		line-height: 15px;
+	}
+	.warnning{
+      width: 304px;
+	  height: 24px;
+	  margin-top: 28px;
+	  background: #fff9f5;
+	  border: 1px solid #ff92a5;
+	  line-height: 24px;
+	}
+	.imgofdengpao{
+		vertical-align: -4px;
+	}
+	.userinputwk{
+		width:305px ;
+		height: 40px;
+		border: 1px solid #E2E2E2;
+		margin-top: 15px;
+		line-height: 36px;
+		display: inline-block;
+	}
+	.userinputwkfir{
+		width:305px ;
+		height: 40px;
+		border: 1px solid #E2E2E2;
+		line-height: 36px;
+		display: inline-block;
+		position: relative;
+	}
+	.userinput{
+		box-sizing: border-box;
+		height: 34px;
+		padding-left: 13px;
+		border: none;
+		border-left: 1px solid #E2E2E2;
+		}
+	.passwordswk{
+			width:305px ;
+		height: 40px;
+		border: 1px solid #E2E2E2;
+		margin-top: 15px;
+		line-height: 36px;
+	}	
+.passwords{
+		box-sizing: border-box;
+		height: 34px;
+		padding-left: 13px;
+		border: none;
+		border-left: 1px solid #E2E2E2;
+	}	
+	.checkinput{
+		position: relative;
+		top: 3px;
+	}
+.thirdperson{
+	display: inline-block;
+	margin-top: 35px;
+}
+.thirdperson-img{
+	display: inline-block;
+	position: relative;
+}
+.register-part{
+	width: 348px;
+	height: 420px;
+	background: white;
+	position: absolute;
+	left: 818px;
+	top: 28px;
+	padding:22px;
+	box-sizing: border-box;
+	display: none;
+}
+.register-part.showup{
+	display: block;
+	
+}
+.register-part-toptext{
+	width: 305px;
+	height: 20px;
+	margin-bottom: 1px;
+}
+.error-tips{
+	width: 260px;
+	height: 22px;
+	border: 1px solid #fbaab8;
+	margin-left: 5px;
+	background: #fff9f5;
+	box-sizing: border-box;
+	padding: 2px 6px;
+	margin-bottom: 6px;
+}
+.phoneadvice{
+	width: 140px;
+	height: 15px;
+}
+	.userinputwkverti{
+			width:183px ;
+		height: 40px;
+		border: 1px solid #E2E2E2;
+		margin-top: 15px;
+		line-height: 36px;
+		display: inline-block;
+		margin-right: 8px;
+	}
+	.userinputverti{
+		box-sizing: border-box;
+		height: 34px;
+		border: none;
+		width: 130px;
+		}
+			.userinputphone{
+			box-sizing: border-box;
+			height: 34px;
+			border: none;
+			}
+.getvertibtn{			
+		background:#ff607c;
+		text-align: center;
+		line-height: 40px;
+		height: 42px;
+		width: 106px;
+		display: inline-block;
+			}
+	.registerbtnnow{
+		height: 40px;
+		width: 306px;
+		text-align: center;
+		line-height: 40px;
+		background: #ff2d52;
+	}
+	.logibtn:hover{
+		cursor: pointer;
+	}

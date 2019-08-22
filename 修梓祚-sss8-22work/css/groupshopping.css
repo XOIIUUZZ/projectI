@@ -1,0 +1,115 @@
+.contentofall-groupgoods{
+	width: 230px;
+	height: 322px;
+	box-sizing: border-box;
+ 	border: 1px solid #E2E2E2;	
+ 	padding: 8px;
+ 	position: relative;
+ 	margin: 0 auto;
+}
+.progressbar-pink{
+	display: inline-block;
+	width: 61px;
+	height: 7px;
+	border: 1px solid #ffcbd3;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.progressbar-pink-content{
+	width: 50%;
+	height: 7px;
+	background: #ffcbd3;
+}
+
+.groupgoods-border{
+    width: 231px;
+    height: 323px;
+    box-sizing: border-box;
+    border: 2px solid #FF2D52;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    display: none;
+}
+.groupbuyingnow{
+	width: 227px;
+    height: 40px;
+    background: #FF2D52;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    bottom: -1px;
+    
+}
+.contentofall-groupgoods:hover .groupgoods-border{
+	 display: block;
+}
+.contentofall-groupgoods:hover .groupbuyingnow{
+	 display: block;
+	
+}
+.classification-bar{
+	width: 100%;
+}
+.classification-bar-content{
+	width: 1200px;
+	margin: 0 auto;
+	height: 38px;
+	line-height: 38px;
+}
+.classification-bar-content li{
+	display: inline-block;
+	font-size: 12px;
+	width: 55px;
+}
+.classification-bar-content li:hover{
+	cursor: pointer;
+	color: #FF2D52;
+}
+.classification-barII{
+	border-top: 1px solid #E2E2E2;
+	border-bottom: 1px solid #E2E2E2;
+	background:#ededed;
+	width: 100%;
+}
+.classification-bar-contentII{
+	width: 1200px;
+	margin: 0 auto;
+	height: 38px;
+	line-height: 38px;
+	box-sizing: border-box;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	
+}
+.classification-bar-contentII-infors{
+    width: 83px;
+    height: 100%;
+    line-height: 32px;
+    text-align: center;
+    border-right: 1px solid #E2E2E2;
+    }
+    .sortbox{
+    	width: 54px;
+    	height: 22px;
+    	background: #FF2D52;
+    	color: white;
+    	font-size: 12px;
+    	text-align: center;
+    	line-height: 22px;
+    	margin-top: 6px;
+    }
+	.arrowbox{
+	height: 18px;
+	width: 18px;
+	line-height: 18px;
+	text-align: center;
+	border: 1px solid #E2E2E2;
+	color: grey;
+	}
+	.widthtools{
+	width: 20%;
+	display: inline-block;
+	}
