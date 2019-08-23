@@ -861,14 +861,24 @@
 						<!--<div class="Magnifier"></div>-->
 					<img src="img/jokeer.jpg" style="max-width: 400px; max-height: 400px;" class="small-img">
 					</div>
-					<div class="margin-t-20 margin-b-20">
-						<div class="arrowSleft font-12 fl-l">
-							<</div> <img src="img/xiaotu1.png" class="littlepic" />
+					<div class="margin-t-20 margin-b-20 bannerall">
+						<div class="arrowSleft arrow font-12 fl-l"><</div> 
+							<div class="clearfix" style="display: inline-block;">
+							<div class="Manual-banner font-0">
+							<div class="Manualbanner-box">
+							<img src="img/xiaotu1.png" class="littlepic chosenimg" />
 							<img src="img/xiaotu2.png" class="littlepic" />
 							<img src="img/xiaotu3.png" class="littlepic" />
 							<img src="img/xiaotu4.png" class="littlepic" />
 							<img src="img/xiaotu5.png" class="littlepic" />
-							<div class="arrowrSRight font-12 fl-r">></div>
+							<img src="img/xiaotu2.png" class="littlepic" />
+							<img src="img/xiaotu3.png" class="littlepic" />
+							<img src="img/xiaotu4.png" class="littlepic" />
+							<img src="img/xiaotu5.png" class="littlepic" />
+							</div>
+							</div>
+							</div>
+							<div class="arrowrSRight arrow font-12 fl-r">></div>
 						</div>
 						<div>
 							<img src="img/zhuanfatubiao.png" class="margin-r-10 margin-t-10">
@@ -1532,14 +1542,18 @@
 
 
 	</body>
-	<script type="text/javascript" src="js/sidebar.js"></script>
-	<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
-	<script type="text/javascript" src="js/detailPage.js" ></script>
+	<script src="js/sidebar.js"></script>
+	<script src="js/jquery-2.1.0.js" ></script>
+	<script src="js/detailPage.js" ></script>
 	<script src="js/zoom.js"></script>
+	<script src="js/detailPageswitch.js" ></script>
 	<script>
 		$('.zoomed-img').qjzoom({
 			offwidth:200,
 			offheight:200
+		})
+		$('.bannerall').Bannermove({
+			name:'.arrow'
 		})
 	</script>
 </html>

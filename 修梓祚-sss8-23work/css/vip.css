@@ -6,7 +6,7 @@
 }
 .VIP-CONTENT-in{
 	width: 1200px;
-	height: 637px;
+	min-height: 637px;
 	border: 1px solid #E2E2E2;
 	margin: 0 auto;
 }
@@ -130,6 +130,8 @@
 	width: 382px;
 	height: 160px;
 	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
 }
 .arrow-left{
 	position: absolute;
@@ -230,4 +232,97 @@
     background: #AAAAA8;
     color: white;
 	
+}
+.rulesofrealname{
+	width: 930px;
+	margin: 0 auto;
+	height: 109px;
+	border: 1px solid #E2E2E2;
+	background: #fff9f5;
+	padding: 20px;
+	box-sizing: border-box;
+	line-height: 26px;
+	margin-bottom: 10px;
+}
+.rulesofrealname-ques{
+	width: 930px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	margin-bottom: 34px;
+	
+}
+.realnameinforinput{
+	height: 36px;
+	width: 300px;
+}
+.facade{
+	width: 200px;
+	height: 128px;
+	border: 1px solid #E2E2E2;
+	background: #fff9f5;
+	text-align: center;
+	line-height: 128px;
+	margin: 0 10px;
+	display: inline-block;
+}
+.IDCARD{
+	width: 200px;
+	text-align: center;
+	margin: 0 10px;
+	display: inline-block;
+}
+.tips-realname{
+	width: 290px;
+	margin-left: 90px;
+	line-height: 25px;
+	margin-top: 15px;
+}
+.confirmnow{
+	width: 96px;
+	height: 38px;
+	border-radius: 5px;
+	background: #FF2D52;
+	text-align: center;
+	line-height: 38px;
+	font-size: 14px;
+	color: white;
+	margin-left: 90px;
+	margin-top: 20px;
+}
+.rulesofintegral{
+	width: 930px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding: 20px;
+	background: #fff9f5;
+	border: 1px solid #E2E2E2;
+	margin-bottom: 20px;
+}
+.changeBTN{
+	display: inline-block;
+	width: 60px;
+	height: 25px;
+	background: #FF2D52;
+	line-height: 25px;
+	text-align: center;
+	color: white;
+	border-radius: 3px;
+}
+.signrecord{
+	width: 930px;
+	height: 270px;
+	border: 1px solid #E2E2E2;
+	margin: 0 auto;
+}
+.signrecord-title{
+	width: 33%;
+	text-align: center;
+	line-height: 45px;
+	font-size: 12px;
+	display: inline-block;
+	height: 45px;
+}
+.Manualbanner-box{
+	    position: absolute;
+	    left:0;
 }

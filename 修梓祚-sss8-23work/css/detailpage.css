@@ -210,6 +210,12 @@
 .littlepic:hover{
 	border-color: #FF2D52
 }
+.littlepic.chosenimg{
+	height: 54px;
+	width: 54px;
+	border: 1px solid #FF2D52;
+	margin-left: 10px;
+}
 .collectgoods{
 	height: 26px;
 	width: 78px;
@@ -483,4 +489,15 @@ display: inline-block;
 	/*width: 200px;
 	height: 200px;*/
 	overflow: hidden;
+}
+.Manual-banner{
+	width: 330px;
+	overflow: hidden;
+	height: 56px;
+	position: relative;
+	float: left;
+}
+.Manualbanner-box{
+	position: absolute;
+    left: 0;
 }

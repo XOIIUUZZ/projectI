@@ -38,15 +38,25 @@
 //	}
 //	
 //}
+(function($){
+	
+	
+	
+})(jQuery)
 
-
-function changeTab(parentclass){
+	
+	$.fn.changeTab(function(parentclass){
+	
 	var parent = document.querySelector(parentclass)
+	
 	var tabLists = parent.querySelectorAll('.tab-lists')
+
 	var tabtitles = parent.querySelectorAll('.tab-titles')
-	for(i=0;i<tabtitles.length;i++){
+		
+		for(i=0;i<tabtitles.length;i++){
 		tabtitles[i].order=i;
 		tabtitles[i].onmouseenter=function(){
+		
 		for(j=0;j<tabLists.length;j++){
 		tabLists[j].classList.remove('show')
 		tabtitles[j].classList.remove('show')	
@@ -55,10 +65,13 @@ function changeTab(parentclass){
 		tabLists[this.order].classList.add('show')
 		}
 	}
-	
-}
+})
 
 changeTab('.Tab-box1')
 changeTab('.Tab-box2')
 changeTab('.Tab-box3')
 changeTab('.Tab-box4')
+
+
+
+$('.Tab-box1').changeTab()
