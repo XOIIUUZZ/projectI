@@ -13,7 +13,7 @@
 .left-VIP{
 	width: 228px;
 	height: 637px;
-	border-right:1px solid #E2E2E2;
+
 }
 .left-VIP li:hover{
 	color: #FF2D52;
@@ -21,8 +21,9 @@
 }
 .right-VIP{
 	width: 967px;
-	height: 637px;
+	min-height:637px;
 	box-sizing: border-box;
+	border-left:1px solid #E2E2E2;
 }
 .vip-user{
 	height: 158px;
@@ -161,4 +162,72 @@
 	background: #E2E2E2;
 	color: #FF2D52;
 	cursor: pointer;
+}
+.mycouponTEXT{
+	width: 930px;
+	height: 55px;
+	margin: 0 auto;
+	border-bottom:1px solid #E2E2E2;
+	line-height: 55px;
+	margin-bottom: 21px;
+}
+.TEXT-CONTENT{
+	height: 54px;
+	display: inline-block;
+	border-bottom:3px solid #FF2D52;
+}
+.couponBOX{
+	width: 930px;
+	margin: 0 auto;
+	height: 260px;
+	border: 1px solid #E2E2E2;
+}
+.couponBOXtitle{
+	height: 39px;
+	background: #fff9f5;
+	line-height: 39px;
+}
+.couponBOXtitlesele{
+	width: 85px;
+	text-align: center;
+	display: inline-block;
+}
+.couponBOXtitlesele.on{
+	background: white;
+	color: #FF2D52;
+}
+.killpaperlist{
+	width: 280px;
+	height: 180px;
+	background-image: url(../img/killpaper.png);
+}
+.killpaperlist.overtime{
+	width: 280px;
+	height: 180px;
+	background-image: url(../img/overtime-conpon.png);
+}
+.killpaperlist-top{
+	height: 105px;
+	width: 248px;
+	border-bottom: 1px dashed #E2E2E2;
+    margin:0 auto;
+}
+.killpaperlist-bottom{
+	width: 140px;
+	height: 38px;
+	border-radius: 30px;
+    margin:0 auto;
+    background: #ff92a5;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 38px;
+    
+}
+.overtime{
+	color: #AAAAA8;
+}
+.killpaperlist-bottom.overtime{
+    background: #AAAAA8;
+    color: white;
+	
 }
