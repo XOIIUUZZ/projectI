@@ -40,18 +40,13 @@
 //}
 (function($){
 	
+	$.fn.changeTab = function(){
 	
+	var parent = $(this)
 	
-})(jQuery)
+	var tabLists =$(this).find('.tab-lists')
 
-	
-	$.fn.changeTab(function(parentclass){
-	
-	var parent = document.querySelector(parentclass)
-	
-	var tabLists = parent.querySelectorAll('.tab-lists')
-
-	var tabtitles = parent.querySelectorAll('.tab-titles')
+	var tabtitles = $(this).find('.tab-titles')
 		
 		for(i=0;i<tabtitles.length;i++){
 		tabtitles[i].order=i;
@@ -65,13 +60,18 @@
 		tabLists[this.order].classList.add('show')
 		}
 	}
-})
+		
+}
+	
+})(jQuery)
 
-changeTab('.Tab-box1')
-changeTab('.Tab-box2')
-changeTab('.Tab-box3')
-changeTab('.Tab-box4')
+	
+	
+
+//changeTab('.Tab-box1')
+//changeTab('.Tab-box2')
+//changeTab('.Tab-box3')
+//changeTab('.Tab-box4')
 
 
 
-$('.Tab-box1').changeTab()
