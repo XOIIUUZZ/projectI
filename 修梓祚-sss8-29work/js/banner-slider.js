@@ -22,14 +22,11 @@ function autoAnimate(){
 // 	speed=-Math.abs(speed)
 slidetheimgs()
 },2000)
- console.log(timerS)
 }
 //正常轮播功能函数 
 function slidetheimgs(){
-
 	 littlebtn()
 
-	 
 	var timer=setInterval(function(){
 		var left=bannerwidth.offsetLeft+speed
 		bannerwidth.style.left=left+'px'

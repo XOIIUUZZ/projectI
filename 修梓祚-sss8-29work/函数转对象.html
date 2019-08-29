@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		
+		.box-btn{
+			background: #795DA3;
+			text-align: center;
+		}
+		.box-btn.on{
+			background: red;
+		}
+		
+		.box-list{
+			width: 300px;
+   			height: 300px;
+   			display: none;			
+		}
+		.box-list.show{
+			width: 300px;
+   			height: 300px;	
+   			display: block;		
+   			border: 1px solid #E2E2E2;
+		}
+	</style>
+	<body>
+		
+	<div class="tab-tobox">
+		
+		<button class="box-btn on">1</button>
+		<button class="box-btn">2</button>
+		<button class="box-btn">3</button>
+		
+		
+		
+		<div class="box-list show">1</div>
+		<div class="box-list">2</div>
+		<div class="box-list">3</div>
+		
+		
+		
+	</div>
+	
+	</body>
+</html>
+<script>
+//	function humanbeing(name,sex){
+//		var obj = new Object();
+//		obj.name = name
+//		obj.sex = sex
+////		将函数humanbeing参数变成参数sex函数
+//		obj.sex()
+//	}
+//	humanbeing('batman',function(){
+//		
+//		console.log(this.name)
+//		
+//	})
+//	
+//	function idea(name,sex){
+//		
+//		this.name = name
+//		
+//		this.sex = sex
+//		
+//	}
+//	
+//	var obj1 = new idea('batgirl',function(){
+//		
+//		console.log(this.name)
+//		
+//	})
+//	
+//	 function person(){
+//	 	
+//	 }
+//	
+//	console.log(person.prototype)
+//	var obj1 = new person();
+//
+//	 function animal(){
+//	 	
+//	 }
+//	 
+//	animal.prototype = new person()
+//	
+//	var objp = new animal();
+//	console.log(animal.prototype)
+//	
+//	console.log(objp)
+</script>
+<script src="js/PROTOTYPE.js"></script>
+<script>
+	new changeBox({
+		box:'.tab-tobox'
+		
+	})
+	
+</script>

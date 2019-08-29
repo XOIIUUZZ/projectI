@@ -7,8 +7,8 @@
 	$(this).siblings().removeClass('chosenimg')
 	
 })
-
 	$.fn.Bannermove=function(options){
+
 	var numofimg = $(this).find('.littlepic').length
  
   	var _this = this

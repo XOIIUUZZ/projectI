@@ -21,8 +21,12 @@
 		 }
   function aa(TIMIE){
   		TIMIE = String(TIMIE)
+  	
   	if(TIMIE.length<2){
+			
 			TIMIE='0'+ TIMIE
-		}
+		
+  	}
+  	
   	return TIMIE;
   }

@@ -117,6 +117,6 @@ request.onreadystatechange=function(){
 }
 }
 
-table1()
-table2()
-table3()
+//table1()
+//table2()
+//table3()

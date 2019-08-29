@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		/*.dis{
+         display: none;			
+		}
+		.dis.on{
+			display: block;
+		}*/
+		
+	</style>
+	
+	<body>
+		<!--<button>1</button>
+		<button>2</button>
+		<button>3</button>
+
+		<div class="dis">1</div>
+		<div class="dis">2</div>
+		<div class="dis">3</div>-->
+
+	</body>
+</html>
+<script>
+//	var btn = document.querySelectorAll('button')
+//	var dis = document.querySelectorAll('.dis')
+//	
+//	for(let i=0; i<btn.length;i++){
+//		btn[i].onclick=function(){
+//			for(j=0;j<dis.length;j++){
+//				dis[j].classList.remove('on')
+//				console.log(j)
+//			}
+//				console.log(j)
+//			
+//			dis[i].classList.add('on')
+//			
+//		}
+//		
+//	}
+//	
+</script>
+
+<script>
+//第一题
+	function aa(){
+		
+		let [a,b,c] = [1,2,3]
+		
+		console.log(a,b,c)
+	}
+	
+	aa()	
+//第二题
+function sets(x = 1,y = 2,z = 3){
+	
+	console.log(x,y,z)
+}
+	sets()
+//第三题
+	let jsonData = {
+	id: 42,
+  	status: "OK",
+  	data: [867, 5309]
+	}
+	let arrs=[]
+ 	
+ 	for(let prop in jsonData) {
+ 		arrs.push(jsonData[prop]);
+// 	let Px = {};
+//  Px[prop] = jsonData[prop];
+//  arr.push(Px)
+	}
+
+console.log(arrs.flat())
+//第四题
+	const  node = {
+   Loc: {
+   Start: {
+     Line:  1,
+     Colum: 5
+  	}
+	}
+	}
+	let {loc, loc:{ start }, loc: {start:  line }} = node;
+	
+	
+
+	console.log(node.flat())
+//第五题
+	let obj = {};
+	let arr = [];
+	
+	let {foo: obj.prop, bar: arr[0]} = {foo: 123, bar: true}
+	
+
+
+</script>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="toolsname"/>
+		<button class="tryBTN">试试</button>
+	</body>
+</html>
+<script>
+	var a = 1;
+	var b = a;
+	
+	b = 2;
+	var obj = {
+		name : 'AGENT-X',
+		age : 20,
+		sex : 'male'
+	}
+	
+	var obj2 = obj
+	
+	obj2.age = 21
+	
+//	console.log(a,b)
+//	console.log(obj,obj2)
+document.querySelector('.tryBTN').onclick=function(){
+	
+	var batman = {
+	sex:'male',
+	name:'Bruce Wayne',
+	othername:'The Dark Knight',
+	team:'Justice League',
+	height:'188'
+}
+
+Object.defineProperty(batman,'_othername',{
+	get:function(){
+		return this.othername;
+	},
+	set:function(words){
+
+		this.othername = words
+	}
+	
+})
+
+batman._othername = document.querySelector('[name=toolsname]').value
+
+console.log(batman)
+}
+
+	
+</script>
+
