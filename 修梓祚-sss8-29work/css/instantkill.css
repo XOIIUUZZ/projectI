@@ -77,3 +77,9 @@
 	position: relative;
 	z-index: 1;
 }
+.countdown-content{
+	position: absolute;
+	top: 23px;
+    left: 700px;
+	z-index: 2;
+}
