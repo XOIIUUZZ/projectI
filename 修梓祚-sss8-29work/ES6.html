@@ -22,6 +22,7 @@
 		<div class="dis">1</div>
 		<div class="dis">2</div>
 		<div class="dis">3</div>-->
+		<div>请按F12</div>
 
 	</body>
 </html>
@@ -79,23 +80,26 @@ function sets(x = 1,y = 2,z = 3){
 console.log(arrs.flat())
 //第四题
 	const  node = {
-   Loc: {
-   Start: {
-     Line:  1,
+   loc: {
+   start: {
+     line:  1,
      Colum: 5
   	}
 	}
 	}
-	let {loc, loc:{ start }, loc: {start:  line }} = node;
+	let {loc, loc:{ start }, loc: {start: { line ,Colum}}} = node;
 	
-	
+	console.log(loc)
+	console.log(start)
+	console.log(Colum)
 
-	console.log(node.flat())
 //第五题
 	let obj = {};
 	let arr = [];
 	
-	let {foo: obj.prop, bar: arr[0]} = {foo: 123, bar: true}
+	({foo: obj.prop, bar: arr[0]} = {foo: 123, bar: true})
+	
+	console.log(obj.prop,arr[0])
 	
 
 
