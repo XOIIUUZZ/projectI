@@ -10,13 +10,18 @@
 		if(Timeleft<=0){
 			return'000000'
 		}
-		var hours=Math.floor(Timeleft/(1000*60*60))
-		var minutes=Math.floor((Timeleft-hours*60*60*1000)/(1000*60))
-		var seconds=Math.floor((Timeleft-hours*60*60*1000-minutes*60*1000)/1000)
+		console.log(Timeleft)
+		var day = Math.floor(Timeleft/(1000*60*60*24))
+		console.log(day)
+		var hours=Math.floor((Timeleft-day*24*60*60*1000)/(1000*60*60))
+		var minutes=Math.floor((Timeleft-day*24*60*60*1000-hours*60*60*1000)/(1000*60))
+		var seconds=Math.floor((Timeleft-day*24*60*60*1000-hours*60*60*1000-minutes*60*1000)/1000)
+		day = aa(day)
 		hours=aa(hours)
 		minutes=aa(minutes)
 		seconds=aa(seconds)
-		return hours + minutes + seconds;
+		
+		return hours + minutes + seconds + day;
 
 		 }
   function aa(TIMIE){

@@ -907,8 +907,8 @@
 						<p class="margin-t-15 margin-l-30 fl-l">
 							<span class="font-14 ">市场价：</span>
 							<span class='linethroughs'>￥255.00</span>
-							<div class="fl-r margin-t-15 margin-r-10">
-								<img src="img/alarm-clock.png" class="alarmclock">
+							<div class="fl-r margin-t-15 margin-r-10 countdowndetail">
+								<!--<img src="img/alarm-clock.png" class="alarmclock">
 								<span>02</span>
 								<span class="font-14 font-grey">天</span>
 								<span>12</span>
@@ -916,7 +916,7 @@
 								<span>13</span>
 								<span class="font-14 font-grey">分</span>
 								<span>53</span>
-								<span class="font-14 font-grey">秒</span>
+								<span class="font-14 font-grey">秒</span>-->
 							</div>
 						</p>
 
@@ -1547,6 +1547,8 @@
 	<script src="js/detailPage.js" ></script>
 	<script src="js/zoom.js"></script>
 	<script src="js/detailPageswitch.js" ></script>
+	<script src="js/countdown.js"></script>
+	<script src="js/anotherpofcountdown.js"></script>
 	<script>
 		$('.zoomed-img').qjzoom({
 			offwidth:200,
@@ -1555,5 +1557,6 @@
 		$('.bannerall').Bannermove({
 			name:'.arrow'
 		})
+		 var timer=setInterval(detailpagethetime,1000)
 	</script>
 </html>
