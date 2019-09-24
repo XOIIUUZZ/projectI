@@ -1,10 +1,10 @@
--- åˆ›å»ºæ•°æ®åº“
+-- ´´½¨Êý¾Ý¿â
 CREATE DATABASE demo
 
--- åˆ›å»ºè¡¨
+-- ´´½¨±í
 CREATE TABLE stu(
 
--- å‚æ•° å‚æ•°ç±»åž‹
+-- ²ÎÊý ²ÎÊýÀàÐÍ
 
 id INT,
   
@@ -21,34 +21,34 @@ abilities VARCHAR(100),
 powerlevel VARCHAR(100)
 
 )
--- æ˜¾ç¤ºæ‰€æœ‰è¡¨æ ¼
+-- ÏÔÊ¾ËùÓÐ±í¸ñ
 SHOW TABLES 
 
--- æ˜¾ç¤ºstuè¡¨
+-- ÏÔÊ¾stu±í
 SHOW CREATE TABLE stu	
 
--- æŸ¥è¯¢è¡¨ç»“æž„
+-- ²éÑ¯±í½á¹¹
 DESC stu
 
--- ç»™è¡¨stuæ·»åŠ ä¸€ä¸ªpowerelvelå‚æ•°
+-- ¸ø±ístuÌí¼ÓÒ»¸öpowerelvel²ÎÊý
 ALTER TABLE stu ADD powerlevel VARCHAR(10)
 
--- å°†è¡¨å†…ä¸€ä¸ªåä¸ºgenderçš„å‚æ•°æ›´åä¸ºsex
+-- ½«±íÄÚÒ»¸öÃûÎªgenderµÄ²ÎÊý¸üÃûÎªsex
 ALTER TABLE stu CHANGE gender sex VARCHAR(20)
 
--- æ›´æ”¹å·²å­˜åœ¨å±žæ€§sexä¸”idç­‰äºŽ1æ—¶çš„å€¼
+-- ¸ü¸ÄÒÑ´æÔÚÊôÐÔsexÇÒidµÈÓÚ1Ê±µÄÖµ
 UPDATE stu SET sex='man' WHERE id = 1
 
--- æ›´æ”¹å·²å­˜åœ¨å±žæ€§codesä¸”idç­‰äºŽ7æ—¶çš„å€¼
+-- ¸ü¸ÄÒÑ´æÔÚÊôÐÔcodesÇÒidµÈÓÚ7Ê±µÄÖµ
 UPDATE stu SET codes=50 WHERE id = 7
 
--- æ›´æ”¹å·²å­˜åœ¨å±žæ€§coedsä¸”idç­‰äºŽ6æ—¶çš„å€¼
+-- ¸ü¸ÄÒÑ´æÔÚÊôÐÔcoedsÇÒidµÈÓÚ6Ê±µÄÖµ
 UPDATE stu SET codes=90 WHERE id = 6
 
--- åˆ é™¤è¡¨stu
+-- É¾³ý±ístu
 DROP TABLE stu
 
--- å¯¹åº”å‚æ•°å±žæ€§æ’å…¥æ•°æ®
+-- ¶ÔÓ¦²ÎÊýÊôÐÔ²åÈëÊý¾Ý
 INSERT INTO stu VALUE(1,'dante','man','40','80',NULL,'SSS'),
 		     (2,'vergil','man','42','100',NULL,'SSS'),
 		     (3,'batman','man','60','70',NULL,'SSS'),
@@ -57,65 +57,65 @@ INSERT INTO stu VALUE(1,'dante','man','40','80',NULL,'SSS'),
 		     (6,'wesker','man','18','20',NULL,'SSS'),
 		     (7,'albert','female','25','20',NULL,'SSS')
 
--- ç­›é€‰æ˜¾ç¤ºå‡ºstuå†…æ‰€æœ‰æ•°æ®		     
+-- É¸Ñ¡ÏÔÊ¾³östuÄÚËùÓÐÊý¾Ý		     
 SELECT * FROM stu
 
--- æ›´æ”¹å·²å­˜åœ¨å±žæ€§sexä¸”idç­‰äºŽ5æ—¶çš„å€¼
+-- ¸ü¸ÄÒÑ´æÔÚÊôÐÔsexÇÒidµÈÓÚ5Ê±µÄÖµ
 UPDATE stu SET sex='female'WHERE id=5
 
--- ç­›é€‰æ˜¾ç¤ºå‡ºnameå’Œsexçš„å±žæ€§å€¼		  
+-- É¸Ñ¡ÏÔÊ¾³önameºÍsexµÄÊôÐÔÖµ		  
 SELECT NAME,sex FROM stu
 
--- åŽ»é‡ç­›é€‰å‡ºcodeså‚æ•°çš„å±žæ€§å€¼
+-- È¥ÖØÉ¸Ñ¡³öcodes²ÎÊýµÄÊôÐÔÖµ
 SELECT DISTINCT codes FROM stu
 
--- ä»Žstuä¸­ç­›é€‰å‡ºageå’Œcodesçš„å€¼å¹¶ç›¸åŠ èµ‹ç»™æ–°å¢žçš„totalå¹¶æ˜¾ç¤º
+-- ´ÓstuÖÐÉ¸Ñ¡³öageºÍcodesµÄÖµ²¢Ïà¼Ó¸³¸øÐÂÔöµÄtotal²¢ÏÔÊ¾
 SELECT (age+codes)AS total FROM stu
 
---  ç­›é€‰æ˜¾ç¤ºå‡ºæ‰€æœ‰ageå±žæ€§å€¼å°äºŽ20çš„æ•°æ®
+--  É¸Ñ¡ÏÔÊ¾³öËùÓÐageÊôÐÔÖµÐ¡ÓÚ20µÄÊý¾Ý
 SELECT * FROM stu WHERE age < 20;
 
---  ç­›é€‰æ˜¾ç¤ºå‡ºæ‰€æœ‰ageå±žæ€§å€¼ä¸ç­‰äºŽ20çš„æ•°æ®
+--  É¸Ñ¡ÏÔÊ¾³öËùÓÐageÊôÐÔÖµ²»µÈÓÚ20µÄÊý¾Ý
 SELECT * FROM stu WHERE age != 20;
 
---  ç­›é€‰æ˜¾ç¤ºå‡ºæ‰€æœ‰ageå±žæ€§å€¼å¤§äºŽ20ä¸”sexä¸ºmançš„æ•°æ®
+--  É¸Ñ¡ÏÔÊ¾³öËùÓÐageÊôÐÔÖµ´óÓÚ20ÇÒsexÎªmanµÄÊý¾Ý
 SELECT * FROM stu WHERE age > 20 AND sex='man'
 
---  ç­›é€‰æ˜¾ç¤ºå‡ºæ‰€æœ‰idä¸º1æˆ–3æˆ–5çš„æ•°æ®
+--  É¸Ñ¡ÏÔÊ¾³öËùÓÐidÎª1»ò3»ò5µÄÊý¾Ý
 SELECT * FROM stu WHERE id=1 OR id=3 OR id=5; 
 
---  ç­›é€‰æ˜¾ç¤ºå‡ºæ‰€æœ‰idä¸º1æˆ–3æˆ–5çš„æ•°æ®
+--  É¸Ñ¡ÏÔÊ¾³öËùÓÐidÎª1»ò3»ò5µÄÊý¾Ý
 SELECT * FROM stu WHERE id IN(1,3,5)
 
---  ç­›é€‰æ˜¾ç¤ºå‡ºæ‰€æœ‰codeså€¼åœ¨60åˆ°90ä¹‹é—´çš„æ•°æ®
+--  É¸Ñ¡ÏÔÊ¾³öËùÓÐcodesÖµÔÚ60µ½90Ö®¼äµÄÊý¾Ý
 SELECT NAME FROM stu WHERE codes BETWEEN 60 AND 90
 
---  ç­›é€‰æ˜¾ç¤ºå‡ºæ‰€æœ‰nameå«æœ‰supçš„æ•°æ®
+--  É¸Ñ¡ÏÔÊ¾³öËùÓÐnameº¬ÓÐsupµÄÊý¾Ý
 SELECT * FROM stu WHERE NAME LIKE'%sup%'
 
--- å°†æ‰€æœ‰ageä¸ºnullçš„å±žæ€§å€¼è®¾ä¸º0
+-- ½«ËùÓÐageÎªnullµÄÊôÐÔÖµÉèÎª0
 UPDATE stu SET age=0 WHERE age IS NULL
 
--- å°†stué‡Œæ•°æ® æŒ‰ageå€¼å¤§å°çš„é™åºæŽ’åˆ—
+-- ½«stuÀïÊý¾Ý °´ageÖµ´óÐ¡µÄ½µÐòÅÅÁÐ
 SELECT * FROM stu ORDER BY age DESC
 
--- å°†stué‡Œæ•°æ® æŒ‰ageå€¼å¤§å°çš„å‡åºæŽ’åˆ—
+-- ½«stuÀïÊý¾Ý °´ageÖµ´óÐ¡µÄÉýÐòÅÅÁÐ
 SELECT * FROM stu ORDER BY age ASC
 
--- å°†stué‡Œæ•°æ® æŒ‰idå€¼å¤§å°çš„å‡åºæŽ’åˆ—
+-- ½«stuÀïÊý¾Ý °´idÖµ´óÐ¡µÄÉýÐòÅÅÁÐ
 SELECT * FROM stu ORDER BY id ASC
 
--- è®¡ç®—å‡ºæ‰€æœ‰ageå¤§äºŽ20çš„ä¸ªæ•°
+-- ¼ÆËã³öËùÓÐage´óÓÚ20µÄ¸öÊý
 SELECT COUNT(*) FROM stu WHERE age>20
 
--- æŒ‰sexåˆ†ç±»åˆ†åˆ«è®¡ç®—æ¯ä¸ªç±»çš„æ€»ä¸ªæ•°
+-- °´sex·ÖÀà·Ö±ð¼ÆËãÃ¿¸öÀàµÄ×Ü¸öÊý
 SELECT COUNT(*) FROM stu GROUP BY sex
 
--- æŒ‰codes>60çš„æ•°æ®åˆ†ç»„ç­›é€‰å‡ºage>20çš„æ•°æ® 
+-- °´codes>60µÄÊý¾Ý·Ö×éÉ¸Ñ¡³öage>20µÄÊý¾Ý 
 SELECT * FROM stu WHERE age>20 GROUP BY codes HAVING codes>60
 
--- ç­›é€‰ç²—ä»Žç¬¬äºŒä¸ªæ•°æ®å¼€å§‹ä¸€å…±5ä¸ªæ•°æ®
+-- É¸Ñ¡´Ö´ÓµÚ¶þ¸öÊý¾Ý¿ªÊ¼Ò»¹²5¸öÊý¾Ý
 SELECT * FROM stu LIMIT 1,5
 
--- åˆ é™¤è¡¨
+-- É¾³ý±í
 DELETE FROM stu
