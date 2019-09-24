@@ -1,0 +1,76 @@
+.goods-control {
+    position: fixed;
+	width: 100%;
+    top: 0;
+    left: 0;
+    padding: 0 20px;
+    line-height: 23px;
+    background: #f1f1f1;
+    z-index: 99;
+}
+.goods-control ul {
+    padding: 6px 0;
+    height: 35px;
+}
+.goods-control ul li {
+    float: left;
+}
+.goods-control ul li.goods-list {
+    padding-left: 15px;
+    color: #2d689f;
+    background: url(../img/content_arrow.gif);
+	background-position: 0px 8px;
+	background-repeat: no-repeat;
+}
+
+.goods-control ul li.cutline-row {
+    margin: 5px 21px 9px 37px;
+    height: 12px;
+}
+.goods-control ul li a.actived{
+	color: #fff;
+	background-color: #2d689f;
+}
+.goods-control ul li a {
+    display: block;
+    margin-right: 10px;
+    padding: 0 10px;
+    color: #464646;
+    border-radius: 2px;
+	text-decoration: none;
+}
+.addbtn{
+	position:absolute;
+	left: 78px;
+	top: 5px;
+}
+.tips-bar {
+    height: 31px;
+    text-indent: 30px;
+    line-height: 31px;
+    color: #333;
+    background: #fff url(../img/icon_tip.png) no-repeat 9px center;
+    overflow: hidden;
+    border: solid 1px #ddd;
+	
+}
+.close-tip {
+    float: right;
+    margin-right: 10px;
+    color: #2d689f;
+}
+
+  .tipswarm {
+    float: left;
+}
+.tips-text p {
+    text-indent: 10px;
+    line-height: 21px;
+}
+.goods-control div.cutline-row{
+	width: 100%;
+	height: 1px;
+	margin: 0;
+	border-top: 1px solid #d6d6d6;
+	border-bottom: 1px solid #fff;
+}

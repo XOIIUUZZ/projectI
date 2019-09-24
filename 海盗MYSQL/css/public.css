@@ -3,6 +3,8 @@
 	padding: 0;
 	list-style: none;	
 	box-sizing: border-box;
+	font: inherit;
+	color: #333;
 		}
 /*清楚浮动*/
 .clearfix:after{
@@ -10,4 +12,14 @@
 	clear: both;
 	display: block;
 	
+}
+
+/* margin */
+.margin-tb {
+    margin: 10px 0;
+}
+
+/* padiing */
+.padding-top-5{
+	padding-top: 5px;
 }
