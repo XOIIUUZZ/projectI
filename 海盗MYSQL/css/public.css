@@ -4,3 +4,10 @@
 	list-style: none;	
 	box-sizing: border-box;
 		}
+/*清楚浮动*/
+.clearfix:after{
+	content:'';
+	clear: both;
+	display: block;
+	
+}
