@@ -82,7 +82,7 @@
 					<div class="cutline"></div>
 						<div class=" attrbutes" style="width:48px;">上架</div>
 					<div class="cutline"></div>
-						<div class=" attrbutes" style="width:97px;">操作</div>
+						<div class=" attrbutes" style="width:97px;">头像`	</div>
 			</div>
 			<div class="KKK">
 			<div class="goods-lists clearfix">
@@ -96,13 +96,14 @@
 				<div class="attrbutes5 text-center" style="width:50px;">5</div>
 				<div class="attrbutes6 text-center" style="width:50px;">5</div>
 				<div class="attrbutes7 text-center" style="width:50px;">5</div>
-				<div class="attrbutes8 text-center" style="width:99px;">5</div>
+				<div class="attrbutes8 text-center" style="width:99px;"><img src="./img/dante.jpg" style="width: 40px;height:40px"></div>
 	        </div>
 		<div>
 	</body>
 </html>
 <script src="js/jquery-2.1.0.js"></script>
 <script>
+	var api = 'http://192.168.97.249:3000'
 	var idea = ``
 	$.ajax({
 		type:"get",
@@ -123,7 +124,7 @@
 				<div class="attrbutes5 text-center" style="width:50px;">${prop.codes}</div>
 				<div class="attrbutes6 text-center" style="width:50px;">${prop.abilities}</div>
 				<div class="attrbutes7 text-center" style="width:50px;">${prop.powerlevel}</div>
-				<div class="attrbutes8 text-center" style="width:99px;">5</div>
+				<div class="attrbutes8 text-center" style="width:99px;"><img src="${api}${prop.avatar}" style="width: 30px;height:30px"></div>
 	        </div>`
 				}
 			var fa = $('.KKK')

@@ -1,73 +1,74 @@
-SELECT * FROM stu
-DESC stu
+CREATE DATABASE goods
 
--- 约束stu里的name不能为NULL	
-ALTER TABLE stu MODIFY NAME VARCHAR(20) NOT NULL;
 
--- 删除不能为null的约束
 
-ALTER TABLE stu MODIFY NAME VARCHAR(20)
+CREATE TABLE goodlists(
+	goodsID INT PRIMARY KEY AUTO_INCREMENT,
+	goodsNAME VARCHAR(20),
+	goodsCLASS VARCHAR(20),
+	goodsATTRIBUTE VARCHAR(20),
+	goodsPRICE DOUBLE(8,2)
 
--- 添加唯一约束
-ALTER TABLE stu MODIFY id INT UNIQUE
+		
+)
+DESC goodlists
 
--- 删除唯一约束
-ALTER TABLE stu DROP INDEX id
+INSERT INTO goodlists VALUE(1,'拉菲','0001','1',100000)
 
--- 主键约束 (唯一且非空stu内有id参数)
-ALTER TABLE stu MODIFY id INT PRIMARY KEY
+SELECT * FROM goodlists
+ 
+CREATE TABLE userlists(
+	userID INT PRIMARY KEY AUTO_INCREMENT,
+	userNAME VARCHAR(20),
+	avatar VARCHAR(1000)
+)
 
--- 添加主键id(stu内无id参数)
-ALTER TABLE stu ADD PRIMARY KEY(id)
+INSERT INTO userlists VALUE(1,'wesker','/wesker.jpg')
 
--- 删除主键约束
-ALTER TABLE stu DROP PRIMARY KEY
+SELECT * FROM userlists
 
--- 删除表内对应数据
-DELETE FROM stu WHERE id=0  
-
--- 添加自动增长
-ALTER TABLE stu MODIFY id INT AUTO_INCREMENT 
-
--- 将id等于一的数据内的streng改为1
-UPDATE stu SET strength=1 WHERE id=1 
-
--- 删除自动增长
-ALTER TABLE stu MODIFY id INT
-
--- 设置自动增长默认开始值为2000
-ALTER TABLE stu AUTO_INCREMENT = 2000
-
--- DELETE：删除所有的记录之后，自增长没有影响
--- TRUNCATE：删除以后，自增长又重新开始。
-
--- 将id默认值设为1 	
-CREATE TABLE st9 (   
-id INT  DEFAULT 1,
+CREATE TABLE collection(
+	goodsID INT,
+	userID INT,
+	CONSTRAINT goods_collect FOREIGN KEY (goodsID) REFERENCES goodlists(goodsID),
+	CONSTRAINT user_collect FOREIGN KEY (userID) REFERENCES userlists(userID)
 
 )
--- 添加一个NAME属性 
-ALTER TABLE st9 ADD NAME VARCHAR(10)
+INSERT INTO userlists VALUE(NULL,NULL)
 
--- 将st9内的id等于1的一行的name设为A
-UPDATE st9 SET NAME='A' WHERE id=1
+CREATE TABLE comments(
+	goodsID INT,
+	userID INT,
+	userNAME VARCHAR(20),
+	avatar VARCHAR(1000),
+	CONSTRAINT goods_comments FOREIGN KEY (goodsID) REFERENCES goodlists(goodsID),
+	CONSTRAINT user_comments FOREIGN KEY (userID) REFERENCES userlists(userID)
 
--- 定义id为主键
-ALTER TABLE st9 MODIFY id INT PRIMARY KEY
+	
+)
+INSERT INTO userlists VALUE(NULL,NULL,NULL,NULL) 
 
--- 设置位子增长
-ALTER TABLE st9 MODIFY id INT AUTO_INCREMENT
+CREATE TABLE orders(
+	userID INT,
+	orderState VARCHAR(20),
+	CONSTRAINT user_orders FOREIGN KEY (userID) REFERENCES userlists(userID)
 
--- 使用默认值1
-INSERT INTO st9 VALUES (DEFAULT)
+)
+INSERT INTO userlists VALUE(NULL,1) 
 
--- 增加一行数据
-INSERT INTO st9 VALUE (NULL,'C'),
-(NULL,'D')
+CREATE TABLE class(
+	classID INT,
+	classNAME VARCHAR(20),
+	CONSTRAINT class_ID FOREIGN KEY (classID) REFERENCES goodlists(goodsCLASS)
 
--- 创建外键约束  
-ALTER TABLE st9 ADD CONSTRAINT FOREIGN KEY(id) REFERENCES stu(id)
+) 
+INSERT INTO userlists VALUE(NULL,NULL) 
 
-SELECT * FROM st9
+CREATE TABLE attribution(
+	attributionID VARCHAR(20)
+	CONSTRAINT attribution_ID FOREIGN KEY (attributionID) REFERENCES goodlists(goodsATTRIBUTE)
 
-DESC st9
+)
+
+
+	
