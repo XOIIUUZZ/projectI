@@ -17,9 +17,9 @@
 				<li><a href="">库存警告</a></li>
 				<li><a href="">回收站</a></li>
 			</ul>
-			<div class="cutline-row"></div>
+			<div class="cutline-width"></div>
 		</div>
-		<div class="tips margin-tb">
+		<div class="margin-tb">
 			<div class="tips-bar">
 				<span class="tipswarm">温馨提示</span>
 				<span class="close-tip">关闭操作提示</span>
@@ -30,5 +30,104 @@
 				<p>- 对分类作任何更改后，都需要到 设置 -> 清理缓存 清理商品分类，新的设置才会生效</p>
 			</div>
 		</div>
+			<div class="cutline-width"></div>
+			<div class="classify-part margin-t-10">
+				<div class="clearfix margin-b-10">
+					<div class="margin-r-10 float-l font-0">
+						<span class="margin-r-10 font-12">按分类查看</span>
+						<input placeholder="请选择分类" type="text" readonly="readonly" class="padding-lr-10 input-classify"/>
+						<div class="icon-form"></div>
+					</div>
+					<div class="margin-r-10 float-l">
+						<span class="margin-r-10">搜索</span>
+						<input placeholder="输入商品名称/货号/条形码" type="text" class="padding-lr-10" style="height: 26px; width: 200px;"/>
+					</div>
+				</div>
+				<div class="font-0">
+					<span class="margin-r-10 font-12">按品牌查看</span>
+						<input placeholder="商品选择" type="text" readonly="readonly" class="padding-lr-10 brand-classify"/>
+						<div class="icon-form"></div>
+						<input type="submit" value="查询" class="searchbtn" />
+				</div>
+			</div>
+			
+			<div class="table-operation">
+				<ul>
+					<li><span class="icon-add"></span>添加</li>
+					<div class="cutline cutline-attribute"></div>
+					<li><span class="icon-delete"></span>删除</li>
+					<div class="cutline cutline-attribute"></div>
+					<li><span class="icon-import"></span>导入</li>
+					<div class="cutline cutline-attribute"></div>
+					<li><span class="icon-output"></span>导出</li>
+					<div class="cutline cutline-attribute"></div>
+				</ul>
+			</div>
+			<div class="attrbute-lists clearfix">
+					<div class="checkedbtn" >
+						<input type="checkbox" class="checkedbtn-itself1"/>
+					</div>
+					<div class="cutline"></div>
+						<div class="attrbutes" style="width:145px;">商品货号</div>
+					<div class="cutline"></div>
+						<div class=" attrbutes" style="width:243px;">商品名称</div>
+					<div class="cutline"></div>
+						<div class=" attrbutes" style="width: 248px;">品牌&分类</div>
+					<div class="cutline"></div>
+						<div class=" attrbutes" style="width:97px;">价格</div>
+					<div class="cutline"></div>
+						<div class=" attrbutes" style="width:48px;">库存</div>
+					<div class="cutline"></div>
+						<div class=" attrbutes" style="width:48px;">排序</div>
+					<div class="cutline"></div>
+						<div class=" attrbutes" style="width:48px;">上架</div>
+					<div class="cutline"></div>
+						<div class=" attrbutes" style="width:97px;">操作</div>
+			</div>
+			<div class="KKK">
+			<div class="goods-lists clearfix">
+				<div class="checkedbtn">
+						<input type="checkbox" class="checkedbtn-itself2"/>
+				</div>
+				<div class="attrbutes1 text-center" style="width:147px;">5</div>
+				<div class="attrbutes2 text-center" style="width:245px;">5</div>
+				<div class="attrbutes3 text-center" style="width: 250px;">5</div>
+				<div class="attrbutes4 text-center" style="width:99px;">5</div>
+				<div class="attrbutes5 text-center" style="width:50px;">5</div>
+				<div class="attrbutes6 text-center" style="width:50px;">5</div>
+				<div class="attrbutes7 text-center" style="width:50px;">5</div>
+				<div class="attrbutes8 text-center" style="width:99px;">5</div>
+	        </div>
+		<div>
 	</body>
 </html>
+<script src="js/jquery-2.1.0.js"></script>
+<script>
+	var idea = ``
+	$.ajax({
+		type:"get",
+		url:"http://192.168.97.249:3000/lists",
+		async:true,
+		datatype:'json',
+		success:function(res){
+			for(var prop of res.data){
+				console.log(prop)
+				idea+=`<div class="goods-lists clearfix">
+				<div class="checkedbtn">
+						<input type="checkbox" class="checkedbtn-itself2"/>
+				</div>
+				<div class="attrbutes1 text-center" style="width:147px;">${prop.id}</div>
+				<div class="attrbutes2 text-center" style="width:245px;">${prop.name}</div>
+				<div class="attrbutes3 text-center" style="width: 250px;">${prop.sex}</div>
+				<div class="attrbutes4 text-center" style="width:99px;">${prop.age}</div>
+				<div class="attrbutes5 text-center" style="width:50px;">${prop.codes}</div>
+				<div class="attrbutes6 text-center" style="width:50px;">${prop.abilities}</div>
+				<div class="attrbutes7 text-center" style="width:50px;">${prop.powerlevel}</div>
+				<div class="attrbutes8 text-center" style="width:99px;">5</div>
+	        </div>`
+				}
+			var fa = $('.KKK')
+			fa.html(idea)
+		}
+	});
+</script>

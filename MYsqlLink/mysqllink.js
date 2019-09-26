@@ -2,6 +2,13 @@ let express = require('express')
 let Mysql = require('mysql')
 let app = express();
 
+app.all('*',function(req,res,next){
+
+    res.header('Access-control-Allow-Origin','*')
+    next()
+})
+
+
 //建立数据库连接 
 let connect = Mysql.createConnection({
 
@@ -25,8 +32,6 @@ app.get('/lists',function(req,res){
             })
         }
     } )
-
-
 })
 
 app.listen(3000)

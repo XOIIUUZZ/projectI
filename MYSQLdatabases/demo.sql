@@ -1,121 +1,73 @@
--- 创建数据库
-CREATE DATABASE demo
-
--- 创建表
-CREATE TABLE stu(
-
--- 参数 参数类型
-
-id INT,
-  
-NAME VARCHAR(100),
-
-sex VARCHAR(5), 
-
-age INT,   
-
-codes INT, 
-
-abilities VARCHAR(100),
-
-powerlevel VARCHAR(100)
-
-)
--- 显示所有表格
-SHOW TABLES 
-
--- 显示stu表
-SHOW CREATE TABLE stu	
-
--- 查询表结构
+SELECT * FROM stu
 DESC stu
 
--- 给表stu添加一个powerelvel参数
-ALTER TABLE stu ADD powerlevel VARCHAR(10)
+-- 约束stu里的name不能为NULL	
+ALTER TABLE stu MODIFY NAME VARCHAR(20) NOT NULL;
 
--- 将表内一个名为gender的参数更名为sex
-ALTER TABLE stu CHANGE gender sex VARCHAR(20)
+-- 删除不能为null的约束
 
--- 更改已存在属性sex且id等于1时的值
-UPDATE stu SET sex='man' WHERE id = 1
+ALTER TABLE stu MODIFY NAME VARCHAR(20)
 
--- 更改已存在属性codes且id等于7时的值
-UPDATE stu SET codes=50 WHERE id = 7
+-- 添加唯一约束
+ALTER TABLE stu MODIFY id INT UNIQUE
 
--- 更改已存在属性coeds且id等于6时的值
-UPDATE stu SET codes=90 WHERE id = 6
+-- 删除唯一约束
+ALTER TABLE stu DROP INDEX id
 
--- 删除表stu
-DROP TABLE stu
+-- 主键约束 (唯一且非空stu内有id参数)
+ALTER TABLE stu MODIFY id INT PRIMARY KEY
 
--- 对应参数属性插入数据
-INSERT INTO stu VALUE(1,'dante','man','40','80',NULL,'SSS'),
-		     (2,'vergil','man','42','100',NULL,'SSS'),
-		     (3,'batman','man','60','70',NULL,'SSS'),
-		     (4,'superman','man','30','60',NULL,'SSS'),
-		     (5,'urizen','fema',NULL,'20',NULL,'SSS'),
-		     (6,'wesker','man','18','20',NULL,'SSS'),
-		     (7,'albert','female','25','20',NULL,'SSS')
+-- 添加主键id(stu内无id参数)
+ALTER TABLE stu ADD PRIMARY KEY(id)
 
--- 筛选显示出stu内所有数据		     
-SELECT * FROM stu
+-- 删除主键约束
+ALTER TABLE stu DROP PRIMARY KEY
 
--- 更改已存在属性sex且id等于5时的值
-UPDATE stu SET sex='female'WHERE id=5
+-- 删除表内对应数据
+DELETE FROM stu WHERE id=0  
 
--- 筛选显示出name和sex的属性值		  
-SELECT NAME,sex FROM stu
+-- 添加自动增长
+ALTER TABLE stu MODIFY id INT AUTO_INCREMENT 
 
--- 去重筛选出codes参数的属性值
-SELECT DISTINCT codes FROM stu
+-- 将id等于一的数据内的streng改为1
+UPDATE stu SET strength=1 WHERE id=1 
 
--- 从stu中筛选出age和codes的值并相加赋给新增的total并显示
-SELECT (age+codes)AS total FROM stu
+-- 删除自动增长
+ALTER TABLE stu MODIFY id INT
 
---  筛选显示出所有age属性值小于20的数据
-SELECT * FROM stu WHERE age < 20;
+-- 设置自动增长默认开始值为2000
+ALTER TABLE stu AUTO_INCREMENT = 2000
 
---  筛选显示出所有age属性值不等于20的数据
-SELECT * FROM stu WHERE age != 20;
+-- DELETE：删除所有的记录之后，自增长没有影响
+-- TRUNCATE：删除以后，自增长又重新开始。
 
---  筛选显示出所有age属性值大于20且sex为man的数据
-SELECT * FROM stu WHERE age > 20 AND sex='man'
+-- 将id默认值设为1 	
+CREATE TABLE st9 (   
+id INT  DEFAULT 1,
 
---  筛选显示出所有id为1或3或5的数据
-SELECT * FROM stu WHERE id=1 OR id=3 OR id=5; 
+)
+-- 添加一个NAME属性 
+ALTER TABLE st9 ADD NAME VARCHAR(10)
 
---  筛选显示出所有id为1或3或5的数据
-SELECT * FROM stu WHERE id IN(1,3,5)
+-- 将st9内的id等于1的一行的name设为A
+UPDATE st9 SET NAME='A' WHERE id=1
 
---  筛选显示出所有codes值在60到90之间的数据
-SELECT NAME FROM stu WHERE codes BETWEEN 60 AND 90
+-- 定义id为主键
+ALTER TABLE st9 MODIFY id INT PRIMARY KEY
 
---  筛选显示出所有name含有sup的数据
-SELECT * FROM stu WHERE NAME LIKE'%sup%'
+-- 设置位子增长
+ALTER TABLE st9 MODIFY id INT AUTO_INCREMENT
 
--- 将所有age为null的属性值设为0
-UPDATE stu SET age=0 WHERE age IS NULL
+-- 使用默认值1
+INSERT INTO st9 VALUES (DEFAULT)
 
--- 将stu里数据 按age值大小的降序排列
-SELECT * FROM stu ORDER BY age DESC
+-- 增加一行数据
+INSERT INTO st9 VALUE (NULL,'C'),
+(NULL,'D')
 
--- 将stu里数据 按age值大小的升序排列
-SELECT * FROM stu ORDER BY age ASC
+-- 创建外键约束  
+ALTER TABLE st9 ADD CONSTRAINT FOREIGN KEY(id) REFERENCES stu(id)
 
--- 将stu里数据 按id值大小的升序排列
-SELECT * FROM stu ORDER BY id ASC
+SELECT * FROM st9
 
--- 计算出所有age大于20的个数
-SELECT COUNT(*) FROM stu WHERE age>20
-
--- 按sex分类分别计算每个类的总个数
-SELECT COUNT(*) FROM stu GROUP BY sex
-
--- 按codes>60的数据分组筛选出age>20的数据 
-SELECT * FROM stu WHERE age>20 GROUP BY codes HAVING codes>60
-
--- 筛选粗从第二个数据开始一共5个数据
-SELECT * FROM stu LIMIT 1,5
-
--- 删除表
-DELETE FROM stu
+DESC st9
