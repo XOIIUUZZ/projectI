@@ -1,19 +1,22 @@
 CREATE DATABASE goods
-
-
+DROP DATABASE goods
+USE goods
 
 CREATE TABLE goodlists(
 	goodsID INT PRIMARY KEY AUTO_INCREMENT,
 	goodsNAME VARCHAR(20),
-	goodsCLASS VARCHAR(20),
-	goodsATTRIBUTE VARCHAR(20),
-	goodsPRICE DOUBLE(8,2)
-
-		
+	goodsCLASS INT,
+	goodsATTRIBUTE INT,
+	goodsPRICE DOUBLE(8,2),
+	CONSTRAINT goods_NAME FOREIGN KEY (goodsCLASS) REFERENCES class(classID),	
+	CONSTRAINT goods_ATTRIBUTE FOREIGN KEY (goodsATTRIBUTE) REFERENCES attribution(attributionID)	
 )
+
+DROP TABLE goodlists
+
 DESC goodlists
 
-INSERT INTO goodlists VALUE(1,'拉菲','0001','1',100000)
+INSERT INTO goodlists VALUE(1,'拉菲','1','1',100000)
 
 SELECT * FROM goodlists
  
@@ -28,25 +31,47 @@ INSERT INTO userlists VALUE(1,'wesker','/wesker.jpg')
 SELECT * FROM userlists
 
 CREATE TABLE collection(
+
 	goodsID INT,
+	
 	userID INT,
+	
+	PRIMARY KEY(goodsID,userID),
+	
 	CONSTRAINT goods_collect FOREIGN KEY (goodsID) REFERENCES goodlists(goodsID),
+	
 	CONSTRAINT user_collect FOREIGN KEY (userID) REFERENCES userlists(userID)
 
 )
-INSERT INTO userlists VALUE(NULL,NULL)
+DROP TABLE collection
+
+DESC collection
+
+INSERT INTO collection VALUE(1,1)
+
+SELECT * FROM collection
 
 CREATE TABLE comments(
-	goodsID INT,
-	userID INT,
-	userNAME VARCHAR(20),
-	avatar VARCHAR(1000),
-	CONSTRAINT goods_comments FOREIGN KEY (goodsID) REFERENCES goodlists(goodsID),
-	CONSTRAINT user_comments FOREIGN KEY (userID) REFERENCES userlists(userID)
 
+	goodsID INT,
+	
+	userID INT,
+	
+	userNAME VARCHAR(20),
+	
+	avatar VARCHAR(1000),
+	
+	CONSTRAINT goods_comments FOREIGN KEY (goodsID) REFERENCES goodlists(goodsID),
+	
+	CONSTRAINT user_comments FOREIGN KEY (userID) REFERENCES userlists(userID)
 	
 )
-INSERT INTO userlists VALUE(NULL,NULL,NULL,NULL) 
+DROP TABLE comments
+
+INSERT INTO comments VALUE(1,1,'wesker','/wesker.jpg') 
+
+SELECT * FROM comments 
+
 
 CREATE TABLE orders(
 	userID INT,
@@ -54,21 +79,26 @@ CREATE TABLE orders(
 	CONSTRAINT user_orders FOREIGN KEY (userID) REFERENCES userlists(userID)
 
 )
-INSERT INTO userlists VALUE(NULL,1) 
+
+INSERT INTO orders VALUE(1,1) 
+SELECT * FROM orders 
 
 CREATE TABLE class(
-	classID INT,
-	classNAME VARCHAR(20),
-	CONSTRAINT class_ID FOREIGN KEY (classID) REFERENCES goodlists(goodsCLASS)
+	classID INT PRIMARY KEY AUTO_INCREMENT,
+	classNAME VARCHAR(20) 
 
 ) 
-INSERT INTO userlists VALUE(NULL,NULL) 
+INSERT INTO class VALUE(1,'家具') 
+SELECT * FROM class
 
 CREATE TABLE attribution(
-	attributionID VARCHAR(20)
-	CONSTRAINT attribution_ID FOREIGN KEY (attributionID) REFERENCES goodlists(goodsATTRIBUTE)
-
+	attributionID INT PRIMARY KEY AUTO_INCREMENT,
+	attributionNAME VARCHAR(20),
+	attributionVALUE VARCHAR(20)
 )
+INSERT INTO attribution VALUE(1,'材质','真皮') 
+SELECT * FROM attribution 
 
 
+SELECT * FROM goodlists g LEFT JOIN class c ON g.goodsclass=c.classID LEFT JOIN attribution a ON g.goodsATTRIBUTE=a.attributionID
 	
