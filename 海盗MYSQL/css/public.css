@@ -13,6 +13,9 @@
 	display: block;
 	
 }
+.inlineblock{
+	display: inline-block;
+}
 /*浮动*/
 .float-l{
 	float: left;

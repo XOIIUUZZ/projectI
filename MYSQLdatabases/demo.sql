@@ -1,6 +1,7 @@
-CREATE DATABASE goods
 DROP DATABASE goods
 USE goods
+USE demo
+SELECT * FROM stu
 
 CREATE TABLE goodlists(
 	goodsID INT PRIMARY KEY AUTO_INCREMENT,
@@ -11,14 +12,27 @@ CREATE TABLE goodlists(
 	CONSTRAINT goods_NAME FOREIGN KEY (goodsCLASS) REFERENCES class(classID),	
 	CONSTRAINT goods_ATTRIBUTE FOREIGN KEY (goodsATTRIBUTE) REFERENCES attribution(attributionID)	
 )
+ALTER TABLE goodlists ADD img VARCHAR(1000)
+
+ALTER TABLE goodlists MODIFY goodsID INT AUTO_INCREMENT
 
 DROP TABLE goodlists
 
 DESC goodlists
 
+DELETE FROM goodlists WHERE goodsID=0
+
+ALTER TABLE goodlists ADD classITEM VARCHAR(20)
+
+ALTER TABLE goodlists MODIFY goodsID INT
+
 INSERT INTO goodlists VALUE(1,'拉菲','1','1',100000)
 
 SELECT * FROM goodlists
+
+ALTER TABLE goodlists MODIFY goodsCLASS VARCHAR(20）
+  
+UPDATE goodlists SET img = 'wesker.jpg' WHERE goodsID = 1
  
 CREATE TABLE userlists(
 	userID INT PRIMARY KEY AUTO_INCREMENT,
@@ -89,6 +103,9 @@ CREATE TABLE class(
 
 ) 
 INSERT INTO class VALUE(1,'家具') 
+INSERT INTO class VALUE(2,'电子产品'),
+			(3,'食品' ),
+			(4,'服饰')
 SELECT * FROM class
 
 CREATE TABLE attribution(
@@ -99,6 +116,4 @@ CREATE TABLE attribution(
 INSERT INTO attribution VALUE(1,'材质','真皮') 
 SELECT * FROM attribution 
 
-
 SELECT * FROM goodlists g LEFT JOIN class c ON g.goodsclass=c.classID LEFT JOIN attribution a ON g.goodsATTRIBUTE=a.attributionID
-	

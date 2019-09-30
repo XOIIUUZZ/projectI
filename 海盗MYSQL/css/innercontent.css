@@ -221,3 +221,9 @@ width: 100%;
 .attrbutes1,.attrbutes2,.attrbutes3,.attrbutes4,.attrbutes5,.attrbutes6,.attrbutes7{
 	line-height: 40px;
 }
+.goods-control ul li{
+	list-style: none;
+}
+.btnadd{
+	cursor: pointer;
+}
