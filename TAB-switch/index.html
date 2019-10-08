@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<style>
+	
+		.box{
+			display: none;
+		}	
+		
+		.box.on{
+			display: block;
+		}
+	</style>
+	
+	<body>
+	<div class="TAB-SWITCH">
+		<span class="title">first</span>
+		
+		<span class="title">second</span>
+		
+		<span class="title">third</span>
+		
+		<div class="box on">
+			<img src="img/1.jpg"/>
+		</div>
+		
+		<div class="box">
+			<img src="img/2.jpg"/>
+		</div>
+		
+		<div class="box">
+			<img src="img/3.jpg"/>
+		</div>
+		
+	</div>
+	</body>
+</html>
+<script src="js/jquery-2.1.0.js"></script>
+<script>
+	var parent = $('.TAB-SWITCH')
+	
+	var title = parent.find('.title')
+	
+	var box =parent.find('.box')
+	
+	for(i=0;i<title.length;i++){
+		
+		title[i].orders=i
+		
+		console.log(title[i])
+		
+		title[i].onclick=function(){
+			
+			console.log(111)
+			
+		for(j=0;j<box.length;j++){
+			
+			box[j].classList.remove('on')
+			
+		}
+		box[this.orders].classList.add('on')
+		
+		}
+	}
+	
+</script>
+	

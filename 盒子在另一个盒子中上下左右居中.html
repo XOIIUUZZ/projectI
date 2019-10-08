@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		.box {
+			width: 90px;
+			height: 90px;
+			border-radius: 50%;
+			background: #D4E9FA;
+			vertical-align: middle;
+			line-height: 90px;
+			font-size: 0;
+			overflow: hidden;
+			/*文本居中   内联盒子居中   行内盒子居中*/
+			text-align: center;   
+		}
+		.box img {
+			max-width: 90px;
+			max-height: 90px;
+			vertical-align: middle;
+		}
+		
+		
+		.box-position {
+			width: 400px;
+			height: 400px;
+			background: #D4E9FA;
+			position: relative;
+		}
+		.box-position .box-child {
+			width: 150px;
+			height: 150px;
+			background: red;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			/*transform 变形*/
+			/*translate 左右上下移动的位置*/
+			transform: translate(-50%, -50%);
+			/*margin-top: -75px;
+			margin-left: -75px;*/
+		}
+	</style>
+	<body>
+		
+		<div class="box">
+			<img src="img/banner04.jpg" />
+		</div>
+		
+		<div class="box-position">
+			<div class="box-child"></div>
+		</div>
+
+	</body>
+</html>
