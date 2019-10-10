@@ -55,7 +55,7 @@ $.tooltip = function(options){
 	    //md5加密封装 
     $.md5 = function(psd){
     	
-   	 return hex_md5(psd)
+   	 return hex_md5(psd);
         
        }
         

@@ -65,8 +65,11 @@ $(function(){
 	
 	// 注册
 	$('#registerBTN').click(function(){
+		
 		let vald = $('.form-validate').valid();
 		if(vald){
+			if($(this).hasclass('disabled')) return false
+			$(this).addClass('disabled')
 			let psd = $('[name=password]').val();
 			
 			let email = $('[name=email]').val();
@@ -76,7 +79,7 @@ $(function(){
 			psd = $.md5(psd);
 		
 			$.ajax({
-				url:'',
+				url:api+'/register',
 				type:'post',
 				data:{
 					email,
