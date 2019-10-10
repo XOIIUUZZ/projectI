@@ -19,12 +19,12 @@ $(function(){
 		})
 	$('#validateBTN').click(function(){
 		let email = $('[name=email]').val()
-		console.log(email)
+		
 		let reg = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/
 		if(email&&reg.test(email)){
 		$.ajax({
 			type:"get",
-			url:"",
+			url: api +"/getcodes",
 			data:{
 				email:email
 			},
@@ -64,8 +64,6 @@ $(function(){
 			let code = $('[name=code]').val();
 			
 				psd = $.md5(psd);
-				
-			console.log()	
 		
 		$.ajax({
 			url:'',

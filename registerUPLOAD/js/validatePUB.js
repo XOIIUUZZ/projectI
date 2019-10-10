@@ -1,3 +1,5 @@
+let api = 'http://192.168.97.246:3000';
+
 (function($,w){
 	
 $.tooltip = function(options){
