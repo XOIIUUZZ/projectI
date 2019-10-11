@@ -68,7 +68,7 @@ $(function(){
 		
 		let vald = $('.form-validate').valid();
 		if(vald){
-			if($(this).hasclass('disabled')) return false
+			if($(this).hasClass('disabled')) return false
 			$(this).addClass('disabled')
 			let psd = $('[name=password]').val();
 			
@@ -86,7 +86,7 @@ $(function(){
 					code,
 					psd
 				},
-				dataType:'jsonp',
+				dataType:'json',
 				success:function(res){
 					if(res.status==200){
 						$.tooltip({

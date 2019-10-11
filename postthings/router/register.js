@@ -32,10 +32,10 @@ module.exports = {
 		}
 		let isregiter = await data.isRegister(param.email)
 		if(!isregiter){
-			res.json){
+			res.json({
 				status:505,
 				message:'用户已经注册'
-			}
+			})
 			return false;
 		} 	
 		let isCode = await data.isCode(param.email,param.code)

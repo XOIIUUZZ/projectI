@@ -1,8 +1,8 @@
-let query = require('../query')
-module.exports = {
+	let query = require('../mysql')
+	module.exports = {
 	 isRegister: async function(email){
-	let data = await query("select * from user where email = ?",email)
-	if(data.length >0){
+		let data = await query("select * from users where email = ?",email)
+		if(data.length >0){
 		return false;
 	}else{
 		 return true;
@@ -17,9 +17,10 @@ module.exports = {
 			return false;
 	 },
 	 register:async function(data){
-		 let sql = 'insert into user(email,password,status) values(?)'
+	
+		 let sql = 'insert into users(email,passwords,status) values(?)'
 		 let result = await query(sql,[data]).catch(function(res){
-			 
+			 console.log(res)
 		 })
 		 if(result){
 			 return true;
@@ -27,7 +28,20 @@ module.exports = {
 		 else{
 			 return false;
 		 }
-		return true;
+		
+	 },
+	 login:async function(data) {
+		 let sql = 'select * from users where email = ? and passwords = ?'
+		 let result = await query(sql,data)
+
+		 if(result.length>0){
+			 return result[0];
+		 }else{
+			return false
+		 }
 	 }
+
+
+
 	 
 }
