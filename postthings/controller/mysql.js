@@ -11,7 +11,6 @@ let pool = mysql.createPool(config.mysql);
 //     password:'root',
 //     database:'shop'
 // })
-
 // 数据库操作
 
 /**
@@ -23,6 +22,8 @@ let query = function(sql,data){
     return new Promise(function(resolve,reject){
         // getConnection 获取连接 回调函数中返回
         pool.getConnection(function(err,connection){
+            console.log(err)
+            console.log(connection)
             if(!err){
                 // sql 查询的语句
                 // data 查询过程中需要的数据

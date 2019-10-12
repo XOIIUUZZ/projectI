@@ -41,15 +41,14 @@ $(function(){
 						$.tooltip({
 							type:'success',
 							content:'信息发送成功'
-						})
+						})					
 						$("#modal").modal('toggle')
-					
-					
 					}else{
 						$.tooltip({
 							type:'error',
 							content:'111'
 						})
+						$("#modal").modal('toggle')
 					}
 				
 				}						
@@ -60,6 +59,7 @@ $(function(){
 				type:'error',
 				content:"请输入正确邮箱"
 			})
+			$("#modal").modal('toggle')
 		}
 	})
 	
@@ -93,12 +93,14 @@ $(function(){
 							type:"success",
 							content:'注册成功'
 						})
+						$("#modal").modal('toggle')
 					}
 					else{
 						$.tooltip({
 							type:'error',
 							content:res.messages
 						})
+						$("#modal").modal('toggle')
 					}
 					
 				}

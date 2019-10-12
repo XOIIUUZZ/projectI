@@ -27,4 +27,8 @@ app.post('/register', lencodedparser,router.register )
 
 app.post('/login',lencodedparser, router.login)
 
+app.post('/verifyLogin',lencodedparser,router.verifyLogin)
+
+app.post('/loginOut',lencodedparser,router.loginOut)
+
 app.listen(3000) 

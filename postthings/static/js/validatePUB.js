@@ -33,7 +33,6 @@ $.tooltip = function(options){
 		$(".close").click(function(){
 			
 							$("#modal").modal('toggle')
-							
 						})
 	</script>`)
 	

@@ -32,8 +32,9 @@
 	 },
 	 login:async function(data) {
 		 let sql = 'select * from users where email = ? and passwords = ?'
-		 let result = await query(sql,data)
-
+		 let result = await query(sql,data).catch(function(err){
+		 })
+		
 		 if(result.length>0){
 			 return result[0];
 		 }else{

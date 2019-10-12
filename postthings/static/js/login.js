@@ -2,11 +2,11 @@ $(function(){
     $('.form-validate').validate({
         rules:{
             email:{
-                require:true,
+                required:true,
                 email:true
             },
             password:{
-                require:true,
+                required:true,
                 rangelength:[6,18]
 
             }
@@ -14,12 +14,10 @@ $(function(){
     })
     let token = window.localStorage.getItem('token')
 
-    console.log(token)
-
     if(token) window.location.href='usercenter.html'
 
     $('#btn-submit').click(function(){
-     
+    
         if( $('.form-validate').valid()){
 
             let email = $('[name=email]').val()
@@ -37,8 +35,8 @@ $(function(){
                     passwords
                 },
                 success:function(res){
+                  
                     if(res.status==200){
-
                     window.localStorage.setItem('token',res.data.token)
                     window.localStorage.setItem('info',JSON.stringify(res.data.info))  
                           
@@ -50,13 +48,15 @@ $(function(){
                                     window.location.href='usercenter.html'  
                                 }
                             })
+                            $("#modal").modal('toggle')
                        
                     }else{
                         $.tooltip({
                             type:'error', 
-                            content:res.message ,
+                            content:res.message,
                             interval:'3000'
                         })
+                        $("#modal").modal('toggle')
                     }
                     
                 }
